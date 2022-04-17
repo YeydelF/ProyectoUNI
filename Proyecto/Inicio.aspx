@@ -44,8 +44,8 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
+					<a href="Inicio.aspx">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
 					</a>
 				</li>
 				<li>
@@ -57,7 +57,7 @@
 							<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
 						</li>
 						<li>
-							<a href="category.html"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+							<a href="carreras.aspx"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Carreras</a>
 						</li>
 						<li>
 							<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
@@ -120,9 +120,8 @@
 					<i class="zmdi zmdi-account"></i>
 				</div>
 				<div class="full-box tile-number text-titles">
-					<p class="full-box">
-                        <asp:Label ID="lbl1" runat="server" Text="Label"></asp:Label></p>
-					<small>Registros</small>
+					<p class="full-box">7</p>
+					<small>Register</small>
 				</div>
 			</article>
 			<article class="full-box tile">

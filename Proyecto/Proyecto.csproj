@@ -169,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
+    <Content Include="LICENSE" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -185,7 +186,6 @@
     <Content Include="fonts\robotocondensed-regular.ttf" />
     <Content Include="fonts\robotocondensed-regular.woff" />
     <Content Include="fonts\robotocondensed-regular.woff2" />
-    <Content Include="LICENSE" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

@@ -1,17 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Collections;
 using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Proyecto
 {
     public partial class Inicio : System.Web.UI.Page
     {
+        ArrayList arr = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
-            lbl1.Text = "50";
+            if (Request.Cookies["Valores"] != null)
+            {
+                string cok = Request.Cookies["Valores"].Value.ToString();
+                string[] words = cok.Split('-');
+                foreach (var word in words)
+                {
+                    arr.Add(word);
+                    Console.WriteLine(word.ToString());
+                }
+               
+            }
+            else
+            {
+                Response.Redirect("Indice.aspx");
+            }
+        }
+
+        
+        public void ValidarSesión()
+        {
+
         }
     }
 }

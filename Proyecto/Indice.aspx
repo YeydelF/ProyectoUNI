@@ -25,7 +25,8 @@
 			</div>
 			<div class="form-group text-center">
                 <asp:Button ID="Button1" runat="server" Text="Iniciar sesión" CssClass="btn btn-info" OnClick="Button1_Click" />
-				
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="" Font-Size="Small"></asp:Label>
 			</div>
 		</form>
 	</div>
