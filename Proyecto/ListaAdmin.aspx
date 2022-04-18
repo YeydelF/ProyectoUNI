@@ -1,7 +1,9 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaAdmin.aspx.cs" Inherits="Proyecto.ListaAdmin" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Admin</title>
+	<title>Lista Admin</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
@@ -13,7 +15,8 @@
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+				    <img src="assets/img/descarga.png" width="70" height="40" />
+                <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
@@ -42,8 +45,8 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
+					<a href="Inicio.aspx">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
 					</a>
 				</li>
 				<li>
@@ -107,7 +110,7 @@
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
 			</div>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+			<p class="lead">Lista actual de administradores del sistema de pedidos de equipos UNI-RUACS</p>
 		</div>
 
 		<div class="container-fluid">
@@ -118,7 +121,7 @@
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="admin-list.html" class="btn btn-success">
+			  		<a href="ListaAdmin.aspx" class="btn btn-success">
 			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
 			  		</a>
 			  	</li>
@@ -134,86 +137,38 @@
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i>&nbsp; LISTA DE ADMINISTRADORES</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
-						<table class="table table-hover text-center">
-							<thead>
-								<tr>
-									<th class="text-center">#</th>
-									<th class="text-center">DNI</th>
-									<th class="text-center">NOMBRES</th>
-									<th class="text-center">APELLIDOS</th>
-									<th class="text-center">TELÉFONO</th>
-									<th class="text-center">A. CUENTA</th>
-									<th class="text-center">A. DATOS</th>
-									<th class="text-center">ELIMINAR</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>7890987651</td>
-									<td>Nombres</td>
-									<td>Apellidos</td>
-									<td>Telefono</td>
-									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
-											<i class="zmdi zmdi-refresh"></i>
-										</a>
-									</td>
-									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
-											<i class="zmdi zmdi-refresh"></i>
-										</a>
-									</td>
-									<td>
-										<form>
-											<button type="submit" class="btn btn-danger btn-raised btn-xs">
-												<i class="zmdi zmdi-delete"></i>
-											</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>7890987651</td>
-									<td>Nombres</td>
-									<td>Apellidos</td>
-									<td>Telefono</td>
-									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
-											<i class="zmdi zmdi-refresh"></i>
-										</a>
-									</td>
-									<td>
-										<a href="#!" class="btn btn-success btn-raised btn-xs">
-											<i class="zmdi zmdi-refresh"></i>
-										</a>
-									</td>
-									<td>
-										<form>
-											<button type="submit" class="btn btn-danger btn-raised btn-xs">
-												<i class="zmdi zmdi-delete"></i>
-											</button>
-										</form>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+					 <form id="form1" runat="server">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <asp:GridView ID="GridView1" runat="server"  CssClass=" table table-hover text-center table-bordered border-primary" AutoGenerateColumns="False" DataKeyNames="idPersona" DataSourceID="SqlDataSource1" >
+                                      <Columns>
+                                          <asp:BoundField DataField="idPersona" HeaderText="idPersona" ReadOnly="True" SortExpression="idPersona" visible="false"/>
+                                          <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                                          <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                                          <asp:BoundField DataField="Codigo" HeaderText="Código" SortExpression="Código" />
+                                          <asp:BoundField DataField="Cedula" HeaderText="Cédula" SortExpression="Cédula" />
+                                          <asp:BoundField DataField="Direccion" HeaderText="Dirección" SortExpression="Dirección" />
+                                          <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
+                                          <asp:BoundField DataField="Descripcion" HeaderText="Tipo" SortExpression="Tipo" ReadOnly="True" />
+                                           <asp:BoundField DataField="Telefono" HeaderText="Teléfono" SortExpression="Teléfono" />
+                                          <asp:CommandField ShowEditButton="true" ControlStyle-CssClass="btn btn-success btn-raised btn-xs " HeaderText="Editar"/>
+                                      </Columns>
+                                  </asp:GridView>
+
+                                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BDUNIConnectionString %>" 
+                                      SelectCommand="SELECT * FROM [VWUsuariosAdministrador]"
+                                       UpdateCommand="UPDATE Persona SET [Nombre] = @Nombre, [Apellido] = @Apellido, [Codigo] = @Codigo, [Cedula] = @Cedula , [Direccion] = @Direccion , [Correo] = @Correo,[Telefono] = @Telefono WHERE [idPersona] = @idPersona">
+
+                                  </asp:SqlDataSource>
+
+                              </div>
+                          </div>
+					 </form>                
 					</div>
-					<nav class="text-center">
-						<ul class="pagination pagination-sm">
-							<li class="disabled"><a href="javascript:void(0)">«</a></li>
-							<li class="active"><a href="javascript:void(0)">1</a></li>
-							<li><a href="javascript:void(0)">2</a></li>
-							<li><a href="javascript:void(0)">3</a></li>
-							<li><a href="javascript:void(0)">4</a></li>
-							<li><a href="javascript:void(0)">5</a></li>
-							<li><a href="javascript:void(0)">»</a></li>
-						</ul>
-					</nav>
 				</div>
 			</div>
 		</div>
@@ -234,3 +189,5 @@
 	</script>
 </body>
 </html>
+
+

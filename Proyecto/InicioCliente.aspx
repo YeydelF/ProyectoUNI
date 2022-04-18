@@ -1,3 +1,5 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioCliente.aspx.cs" Inherits="Proyecto.InicioCliente" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,17 +15,22 @@
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+                <img src="assets/img/descarga.png" width="70" height="40" />
+			<i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
+
+                <form ID="form1" runat="server">
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
-					<figcaption class="text-center text-titles">User Name</figcaption>
+					<figcaption class="text-center text-titles">
+                        <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label></figcaption>
 				</figure>
+                    </form>
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="my-data.html" title="Mis datos">
+						<a href="DatosCuentaCli.aspx" title="Mis datos">
 							<i class="zmdi zmdi-account-circle"></i>
 						</a>
 					</li>
@@ -42,45 +49,8 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
-					</a>
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-case zmdi-hc-fw"></i> Administración <i class="zmdi zmdi-caret-down pull-right"></i>
-					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
-						</li>
-						<li>
-							<a href="category.html"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
-						</li>
-						<li>
-							<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
-						</li>
-						<li>
-							<a href="book.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Usuarios <i class="zmdi zmdi-caret-down pull-right"></i>
-					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
-						</li>
-						<li>
-							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="catalog.html">
-						<i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catalogo
+					<a href="Inicio.aspx">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
 					</a>
 				</li>
 			</ul>

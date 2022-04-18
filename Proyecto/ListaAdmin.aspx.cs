@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace Proyecto
 {
-    public partial class Inicio : System.Web.UI.Page
+    public partial class ListaAdmin : System.Web.UI.Page
     {
         ArrayList arr = new ArrayList();
-        Datos.Consultas c = new Datos.Consultas();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.Cookies["Valores"] != null)
@@ -17,24 +20,20 @@ namespace Proyecto
                 foreach (var word in words)
                 {
                     arr.Add(word);
-                   
                 }
-                string val = arr[1].ToString();// Tipo de usuario
-                string nom = arr[0].ToString();
-                string Nom = c.CSimple("SELECT (Nombre + ' ' + Apellido) AS Usuario FROM Persona, Usuarios WHERE Usuarios.idUsuario = '" + nom + "' AND Persona.idPersona = Usuarios.idPersona");
-                Label1.Text = Nom;
+                string val1 = arr[0].ToString();
+                string val2 = arr[1].ToString();
 
-                if (val != "1")
+                if(val2 != "1")
                 {
-                    Response.Redirect("InicioCliente.aspx");
+                    Response.Redirect("Error/Error.html");
                 }
+
             }
             else
             {
                 Response.Redirect("Indice.aspx");
             }
         }
-
-        
     }
 }

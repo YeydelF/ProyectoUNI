@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Inicio</title>
+	<title>Datos</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
@@ -15,17 +15,22 @@
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+				    <img src="assets/img/descarga.png" width="70" height="40" />
+                <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
+                <form id="form1" runat="server">
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
-					<figcaption class="text-center text-titles">User Name</figcaption>
+					<figcaption class="text-center text-titles">
+                         <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
+					</figcaption>
 				</figure>
+                    </form>
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="my-data.html" title="Mis datos">
+						<a href="DatosCuenta" title="Mis datos">
 							<i class="zmdi zmdi-account-circle"></i>
 						</a>
 					</li>
@@ -73,7 +78,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="ListaAdmin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
 							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>

@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin-list.html" />
     <Content Include="admin-search.html" />
     <Content Include="admin.html" />
     <Content Include="assets\avatars\AdminFemaleAvatar.png" />
@@ -79,6 +78,7 @@
     <Content Include="assets\book\book-cover.jpg" />
     <Content Include="assets\book\book-default.png" />
     <Content Include="assets\icons\mCSB_buttons.png" />
+    <Content Include="assets\img\descarga.png" />
     <Content Include="assets\img\login.jpg" />
     <Content Include="assets\img\sideBar.png" />
     <Content Include="book-config.html" />
@@ -105,13 +105,16 @@
     <Content Include="css\theme-paynes-grey.css" />
     <Content Include="css\theme-portland-orange.css" />
     <Content Include="css\theme-smoky-black.css" />
+    <Content Include="DatosCuentaCli.aspx" />
+    <Content Include="DatosCuenta.aspx" />
+    <Content Include="Error\Error.html" />
+    <Content Include="Error\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\Material-Design-Iconic-Font.svg" />
     <Content Include="fonts\robotocondensed-light.svg" />
     <Content Include="fonts\robotocondensed-regular.svg" />
-    <Content Include="home.html" />
-    <Content Include="index.html" />
     <Content Include="Indice.aspx" />
+    <Content Include="InicioCliente.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.1.1.min.js" />
@@ -120,6 +123,7 @@
     <Content Include="js\material.min.js" />
     <Content Include="js\ripples.min.js" />
     <Content Include="js\sweetalert2.min.js" />
+    <Content Include="ListaAdmin.aspx" />
     <Content Include="ListaC.aspx" />
     <Content Include="my-account.html" />
     <Content Include="my-data.html" />
@@ -137,6 +141,20 @@
     <Compile Include="Carreras.aspx.designer.cs">
       <DependentUpon>Carreras.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DatosCuentaCli.aspx.cs">
+      <DependentUpon>DatosCuentaCli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCuentaCli.aspx.designer.cs">
+      <DependentUpon>DatosCuentaCli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCuenta.aspx.cs">
+      <DependentUpon>DatosCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCuenta.aspx.designer.cs">
+      <DependentUpon>DatosCuenta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Indice.aspx.cs">
       <DependentUpon>Indice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,12 +162,26 @@
     <Compile Include="Indice.aspx.designer.cs">
       <DependentUpon>Indice.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InicioCliente.aspx.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicioCliente.aspx.designer.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaAdmin.aspx.cs">
+      <DependentUpon>ListaAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaAdmin.aspx.designer.cs">
+      <DependentUpon>ListaAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaC.aspx.cs">
       <DependentUpon>ListaC.aspx</DependentUpon>

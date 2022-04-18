@@ -10,17 +10,28 @@
 </head>
 <body>
 	<div class="full-box login-container cover">
+        <div class="container-fluit">
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-10">
+
+                </div>
+                 <div class="col-md-2">
+                     <a href="WebForm1.aspx" style="color:white" class="btn btn-info">Registrar</a>
+                </div>
+                
+            </div>
+        </div>
 		<form   autocomplete="off" class="logInForm" runat="server" id="form1">
 			<p class="text-center text-muted"><i class="zmdi zmdi-account-circle zmdi-hc-5x"></i></p>
 			<p class="text-center text-muted text-uppercase">Inicia sesión con tu cuenta</p>
 			<div class="form-group label-floating">
 			  <label class="control-label" for="UserName">Usuario</label>
-			  <input class="form-control" id="txtUser" type="text" runat="server">
+			  <input style="color:white" class="form-control" id="txtUser" type="text" runat="server">
 			  <p class="help-block">Escribe tú nombre de usuario</p>
 			</div>
 			<div class="form-group label-floating">
 			  <label class="control-label" for="UserPass">Contraseña</label>
-			  <input class="form-control" id="txtPass" type="password" runat="server">
+			  <input class="form-control" style="color:white" id="txtPass" type="password" runat="server">
 			  <p class="help-block">Escribe tú contraseña</p>
 			</div>
 			<div class="form-group text-center">

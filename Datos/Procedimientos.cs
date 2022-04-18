@@ -50,7 +50,29 @@ namespace Datos
                 return "0";
             }
         }
-      
-       
+        public string ActualizarPersona(int id,string cedula, string nombre, string apellido,string telefono,string correo, string direccion)
+        {
+            try
+            {
+
+                SqlCommand sql = new SqlCommand("SPActualizarPersona", conexion.AbrirConexion());
+                sql.CommandType = CommandType.StoredProcedure;
+                sql.Parameters.AddWithValue("@id", id);
+                sql.Parameters.AddWithValue("@Nombre", nombre);
+                sql.Parameters.AddWithValue("@Apellido", apellido);
+                sql.Parameters.AddWithValue("@Cedula", cedula);
+                sql.Parameters.AddWithValue("@Direccion", direccion);
+                sql.Parameters.AddWithValue("@Correo", correo);
+                sql.Parameters.AddWithValue("@Telefono", telefono);
+                sql.ExecuteNonQuery();
+                return "GUARDADO";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return "ERROR";
+            }
+        }
+
     }
 }

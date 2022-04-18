@@ -10,7 +10,7 @@
 namespace Proyecto {
     
     
-    public partial class Inicio {
+    public partial class InicioCliente {
         
         /// <summary>
         /// Control form1.
