@@ -55,3 +55,8 @@ $(document).ready(function(){
         });
     });
 })(jQuery);
+
+Swal.fire({
+    title: "Guardado Correctamente",
+    confirmButtonText: "Aceptar",
+});

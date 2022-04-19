@@ -74,7 +74,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="Admin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
 							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
@@ -116,7 +116,7 @@
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="admin.html" class="btn btn-info">
+			  		<a href="Admin.aspx" class="btn btn-info">
 			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR
 			  		</a>
 			  	</li>

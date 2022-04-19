@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin-search.html" />
+    <Content Include="Admin.aspx" />
     <Content Include="admin.html" />
     <Content Include="assets\avatars\AdminFemaleAvatar.png" />
     <Content Include="assets\avatars\AdminMaleAvatar.png" />
@@ -105,6 +106,8 @@
     <Content Include="css\theme-paynes-grey.css" />
     <Content Include="css\theme-portland-orange.css" />
     <Content Include="css\theme-smoky-black.css" />
+    <Content Include="Cuenta.aspx" />
+    <Content Include="CuentaCli.aspx" />
     <Content Include="DatosCuentaCli.aspx" />
     <Content Include="DatosCuenta.aspx" />
     <Content Include="Error\Error.html" />
@@ -126,7 +129,6 @@
     <Content Include="ListaAdmin.aspx" />
     <Content Include="ListaC.aspx" />
     <Content Include="my-account.html" />
-    <Content Include="my-data.html" />
     <Content Include="provider-list.html" />
     <Content Include="provider.html" />
     <Content Include="search.html" />
@@ -134,12 +136,33 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Carreras.aspx.cs">
       <DependentUpon>Carreras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Carreras.aspx.designer.cs">
       <DependentUpon>Carreras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuenta.aspx.cs">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cuenta.aspx.designer.cs">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaCli.aspx.cs">
+      <DependentUpon>CuentaCli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentaCli.aspx.designer.cs">
+      <DependentUpon>CuentaCli.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatosCuentaCli.aspx.cs">
       <DependentUpon>DatosCuentaCli.aspx</DependentUpon>

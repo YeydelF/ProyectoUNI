@@ -23,10 +23,13 @@ namespace Proyecto
                 }
                 string val = arr[1].ToString();
                 string nom = arr[0].ToString();
+
                 string Nom = c.CSimple("SELECT (Nombre + ' ' + Apellido) AS Usuario FROM Persona, Usuarios WHERE Usuarios.idUsuario = '" + nom + "' AND Persona.idPersona = Usuarios.idPersona");
                 Label1.Text = Nom;
                 string idP = arr[2].ToString();
                 Mostrar(idP);
+
+
 
             }
             else

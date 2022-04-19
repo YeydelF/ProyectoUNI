@@ -1,43 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DatosCuentaCli.aspx.cs" Inherits="Proyecto.DatosCuentaCli" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CuentaCli.aspx.cs" Inherits="Proyecto.CuentaCli" %>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Mis Datos</title>
+	<title>Mi Cuenta</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <form id="form1" runat="server">
 	<!-- SideBar -->
+    <form id="form1" runat="server">
 	<section class="full-box cover dashboard-sideBar">
-    
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				    <img src="assets/img/descarga.png" width="70" height="40" /> 
+				   <img src="assets/img/descarga.png" width="70" height="40" /> 
                 <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
- 
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles">
-                         <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
+                          <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
 					</figcaption>
 				</figure>
-                 
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="#" title="Mis datos">
+						<a href="DatosCuentaCli.aspx" title="Mis datos">
 							<i class="zmdi zmdi-account-circle"></i>
 						</a>
 					</li>
 					<li>
-						<a href="CuentaCli.aspx" title="Mi cuenta">
+						<a href="#" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>
@@ -51,13 +48,10 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-                 
 					<a href="InicioCliente.aspx">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
 					</a>
-                 
 				</li>
-				
 			</ul>
 		</div>
 	</section>
@@ -80,76 +74,83 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-account-circle zmdi-hc-fw"></i> <small> DATOS</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-settings zmdi-hc-fw"></i><small> MI CUENTA</small></h1>
 			</div>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+			<p class="lead">Bienvenido a la ventana para cambiar los datos de usuario. Al hacer cualquier cambio en el Usuario y/o Contraseña, la sesión se cerrará automáticamente</p>
 		</div>
 
-		<!-- Panel mis datos -->
+		<!-- Panel mi cuenta -->
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MIS DATOS</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MI CUENTA</h3>
 				</div>
 				<div class="panel-body">
 					<form>
 				    	<fieldset>
-				    		<legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
+				    		<legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
 				    		<div class="container-fluid">
 				    			<div class="row">
 				    				<div class="col-xs-12">
-								    	<div class="form-group label-floating">
-										  	<label class="control-label">CÉDULA *</label>
-                                              <asp:TextBox ID="txtCedula" runat="server" CssClass="form-control" type="text"  maxlength="16"></asp:TextBox>
-										</div>
-				    				</div>
-				    				<div class="col-xs-12 col-sm-6">
-								    	<div class="form-group label-floating">
-										  	<label class="control-label">Nombres *</label>
-										  	  <asp:TextBox ID="txtNombre" runat="server" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" CssClass="form-control" type="text"  maxlength="30"></asp:TextBox>
-										</div>
-				    				</div>
-				    				<div class="col-xs-12 col-sm-6">
-										<div class="form-group label-floating">
-										  	<label class="control-label">Apellidos *</label>
-										   <asp:TextBox ID="txtApellido" runat="server" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" CssClass="form-control" type="text"  maxlength="30"></asp:TextBox>
+							    		<div class="form-group label-floating">
+										  	<label class="control-label">Nombre de usuario *</label>
+										  
+                                            <asp:TextBox ID="txtUser" runat="server" name="usuario-up" maxlength="15" class="form-control" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}"></asp:TextBox>
                                         </div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 										<div class="form-group label-floating">
-										  	<label class="control-label">Teléfono</label>
-                                             <asp:TextBox ID="txtTelefono" runat="server" pattern="[0-9+]{1,15}" CssClass="form-control" type="text"  maxlength="15"></asp:TextBox>
-										  
-										</div>
-
-				    				</div>
-                                     <div class="col-xs-12 col-sm-6">
-										<div class="form-group label-floating">
-										  	<label class="control-label">Correo</label>
-										  
-                                            <asp:TextBox ID="txtCorreo" runat="server" pattern="+@gmail.com" CssClass="form-control" type="email"  maxlength="50"></asp:TextBox>
+										  	<label class="control-label">E-mail</label>
+										  	<input class="form-control" type="email" name="email-up" maxlength="50" readonly="readonly" id="txtCorreo" runat="server">
 										</div>
 				    				</div>
-				    				<div class="col-xs-12">
-										<div class="form-group label-floating">
-										  	<label class="control-label">Dirección</label>
-										  	<textarea name="direccion-up" class="form-control" rows="2" maxlength="100" id="txtDireccion" runat="server"></textarea>
-										</div>
-				    				</div>
-                                   
+				    				
 				    			</div>
 				    		</div>
 				    	</fieldset>
+				    	<br>
+				    	<fieldset>
+				    		<legend><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</legend>
+				    		<p>
+				    			Para Cambiar la contraseña, debe ingresar su contraseña anterior, seguido, ingresar la nueva contraseña las veces necesarias, en caso de algun fallo aparecerá un texto indicativo
+				    		</p>
+				    		<div class="container-fluid">
+				    			<div class="row">
+				    				<div class="col-xs-12">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Contraseña actual *</label>
+										  	<input class="form-control" type="password" name="password-up" maxlength="70" id="txtPassA" runat="server">
+										</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Nueva contraseña *</label>
+										  	<input class="form-control" type="password" name="newPassword1-up" maxlength="70" id="txtPassN" runat="server">
+										</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Repita la nueva contraseña *</label>
+										  	<input class="form-control" type="password" name="newPassword2-up" maxlength="70" id="txtPassR" runat="server">
+										</div>
+				    				</div>
+				    			</div>
+				    		</div>
+				    	</fieldset>
+				    	<br>
+				    	
 					    <p class="text-center" style="margin-top: 20px;">
-                            <asp:Button ID="Button1" runat="server" Text="Actualizar" CssClass="btn btn-success btn-raised btn-sm" OnClick="Button1_Click" />
-                       </p>
+                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                            <br />
+                            <asp:Button ID="Button1" runat="server" Text="Actualizar"  CssClass="btn btn-success btn-raised btn-sm" OnClick="Button1_Click"/>
+					    </p>
 				    </form>
 				</div>
 			</div>
 		</div>
-	
+		
 	</section>
-     </form>
+    </form>
 	<!--====== Scripts -->
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>
@@ -163,3 +164,4 @@
 	</script>
 </body>
 </html>
+

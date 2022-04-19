@@ -23,6 +23,10 @@ namespace Proyecto
                 string nom = arr[0].ToString();
                 string Nom = c.CSimple("SELECT (Nombre + ' ' + Apellido) AS Usuario FROM Persona, Usuarios WHERE Usuarios.idUsuario = '" + nom + "' AND Persona.idPersona = Usuarios.idPersona");
                 Label1.Text = Nom;
+                if (val != "1")
+                {
+                    Response.Redirect("Error/Error.html");
+                }
             }
             else
             {

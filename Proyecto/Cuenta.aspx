@@ -1,33 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Carreras.aspx.cs" Inherits="Proyecto.Carreras" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cuenta.aspx.cs" Inherits="Proyecto.Cuenta" %>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Categorias</title>
+	<title>Mi Cuenta</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 	<!-- SideBar -->
+    <form id="form1" runat="server">
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-			    <img src="assets/img/descarga.png" width="70" height="40" />
+				   <img src="assets/img/descarga.png" width="70" height="40" /> 
                 <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
-				 <form id="form2" runat="server">
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles">
-                         <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
+                          <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
 					</figcaption>
 				</figure>
-                    </form>
 				<ul class="full-box list-unstyled text-center">
 					<li>
 						<a href="DatosCuenta.aspx" title="Mis datos">
@@ -35,7 +34,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="Cuenta.aspx" title="Mi cuenta">
+						<a href="#" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>
@@ -62,7 +61,7 @@
 							<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
 						</li>
 						<li>
-							<a href="category.html"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+							<a href="Carreras.aspx"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
 						</li>
 						<li>
 							<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
@@ -112,56 +111,74 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Administración <small>CATEORÍAS</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-settings zmdi-hc-fw"></i><small> MI CUENTA</small></h1>
 			</div>
-			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
+			<p class="lead">Bienvenido a la ventana para cambiar los datos de usuario. Al hacer cualquier cambio en el Usuario y/o Contraseña, la sesión se cerrará automáticamente</p>
 		</div>
 
+		<!-- Panel mi cuenta -->
 		<div class="container-fluid">
-			<ul class="breadcrumb breadcrumb-tabs">
-			  	<li>
-			  		<a href="Carreras.aspx" class="btn btn-info">
-			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVA CATEORÍA
-			  		</a>
-			  	</li>
-			  	<li>
-			  		<a href="ListaC.aspx" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CATEORÍAS
-			  		</a>
-			  	</li>
-			</ul>
-		</div>
-
-		<!-- Panel nueva categoria -->
-		<div class="container-fluid">
-			<div class="panel panel-info">
+			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVA CATEORÍA</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-refresh"></i> &nbsp; MI CUENTA</h3>
 				</div>
 				<div class="panel-body">
-					<form id="form1" runat="server">
+					<form>
 				    	<fieldset>
-				    		<legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Información de la categoría</legend>
+				    		<legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
 				    		<div class="container-fluid">
 				    			<div class="row">
-				    				<div class="col-xs-12 col-sm-6">
-								    	<div class="form-group label-floating">
-										  	<label class="control-label">Código *</label>
-										  	<input pattern="[0-9]{1,7}" class="form-control" type="text" name="codigo-reg" required="true" maxlength="7" id="txtCodigo"  runat="server">
+				    				<div class="col-xs-12">
+							    		<div class="form-group label-floating">
+										  	<label class="control-label">Nombre de usuario *</label>
+                                            <asp:TextBox ID="txtUser" runat="server" name="usuario-up" maxlength="15" class="form-control" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}"></asp:TextBox>
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
-								    	<div class="form-group label-floating">
-										  	<label class="control-label">Nombre *</label>
-										  	<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="nombre-reg" required="true" maxlength="30" id="txtNombre" runat="server">
+										<div class="form-group label-floating">
+										  	<label class="control-label">E-mail</label>
+										  	<input class="form-control" type="email" name="email-up" maxlength="50" readonly="readonly" id="txtCorreo" runat="server">
+										</div>
+				    				</div>
+				    				
+				    			</div>
+				    		</div>
+				    	</fieldset>
+				    	<br>
+				    	<fieldset>
+				    		<legend><i class="zmdi zmdi-lock"></i> &nbsp; Contraseña</legend>
+				    		<p>
+				    			Para Cambiar la contraseña, debe ingresar su contraseña anterior, seguido, ingresar la nueva contraseña las veces necesarias, en caso de algun fallo aparecerá un texto indicativo
+				    		</p>
+				    		<div class="container-fluid">
+				    			<div class="row">
+				    				<div class="col-xs-12">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Contraseña actual *</label>
+										  	<input class="form-control" type="password" name="password-up" required="" maxlength="70" id="txtPassA" runat="server">
+										</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Nueva contraseña *</label>
+										  	<input class="form-control" type="password" name="newPassword1-up" required="" maxlength="70" id="txtPassN" runat="server">
+										</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Repita la nueva contraseña *</label>
+										  	<input class="form-control" type="password" name="newPassword2-up" required="" maxlength="70" id="txtPassR" runat="server">
 										</div>
 				    				</div>
 				    			</div>
 				    		</div>
-				    	</fieldset> 
+				    	</fieldset>
+				    	<br>
+				    	
 					    <p class="text-center" style="margin-top: 20px;">
-					    	<asp:Button ID="Guardar" runat="server" Text="Guardar" CssClass="btn btn-info btn-raised btn-sm zmdi zmdi-floppy" OnClick="Guardar_Click" />
-                          
+                            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+                            <br />
+                            <asp:Button ID="Button1" runat="server" Text="Actualizar"  CssClass="btn btn-success btn-raised btn-sm" OnClick="Button1_Click"/>
 					    </p>
 				    </form>
 				</div>
@@ -169,7 +186,7 @@
 		</div>
 		
 	</section>
-
+    </form>
 	<!--====== Scripts -->
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>

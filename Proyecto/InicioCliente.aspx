@@ -35,7 +35,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="my-account.html" title="Mi cuenta">
+						<a href="CuentaCli.aspx" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>

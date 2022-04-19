@@ -10,6 +10,7 @@
 </head>
 <body>
 	<!-- SideBar -->
+     <form id="form1" runat="server">
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
 		<div class="full-box dashboard-sideBar-ct">
@@ -20,14 +21,14 @@
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
-				 <form id="form1" runat="server">
+				
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
 					<figcaption class="text-center text-titles">
                          <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
 					</figcaption>
 				</figure>
-                    </form>
+                   
 				<ul class="full-box list-unstyled text-center">
 					<li>
 						<a href="#" title="Mis datos">
@@ -35,7 +36,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="my-account.html" title="Mi cuenta">
+						<a href="Cuenta.aspx" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>
@@ -80,7 +81,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="Admin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
 							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
@@ -133,32 +134,41 @@
 				    			<div class="row">
 				    				<div class="col-xs-12">
 								    	<div class="form-group label-floating">
-										  	<label class="control-label">DNI/CEDULA *</label>
-										  	<input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-up" required="" maxlength="30">
+										  	<label class="control-label">CÉDULA *</label>
+                                              <asp:TextBox ID="txtCedula" runat="server" CssClass="form-control" type="text"  maxlength="16"></asp:TextBox>
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 								    	<div class="form-group label-floating">
 										  	<label class="control-label">Nombres *</label>
-										  	<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="nombre-up" required="" maxlength="30">
+										  	  <asp:TextBox ID="txtNombre" runat="server" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" CssClass="form-control" type="text"  maxlength="30"></asp:TextBox>
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 										<div class="form-group label-floating">
 										  	<label class="control-label">Apellidos *</label>
-										  	<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="apellido-up" required="" maxlength="30">
-										</div>
+										   <asp:TextBox ID="txtApellido" runat="server" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" CssClass="form-control" type="text"  maxlength="30"></asp:TextBox>
+                                        </div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 										<div class="form-group label-floating">
 										  	<label class="control-label">Teléfono</label>
-										  	<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-up" maxlength="15">
+                                             <asp:TextBox ID="txtTelefono" runat="server" pattern="[0-9+]{1,15}" CssClass="form-control" type="text"  maxlength="15"></asp:TextBox>
+										  
+										</div>
+
+				    				</div>
+                                     <div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Correo</label>
+										  
+                                            <asp:TextBox ID="txtCorreo" runat="server" pattern="+@gmail.com" CssClass="form-control" type="email"  maxlength="50"></asp:TextBox>
 										</div>
 				    				</div>
 				    				<div class="col-xs-12">
 										<div class="form-group label-floating">
 										  	<label class="control-label">Dirección</label>
-										  	<textarea name="direccion-up" class="form-control" rows="2" maxlength="100"></textarea>
+										  	<textarea name="direccion-up" class="form-control" rows="2" maxlength="100" id="txtDireccion" runat="server"></textarea>
 										</div>
 				    				</div>
 				    			</div>
@@ -173,7 +183,7 @@
 		</div>
 		
 	</section>
-
+ </form>
 	<!--====== Scripts -->
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>

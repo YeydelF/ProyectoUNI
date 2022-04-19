@@ -30,12 +30,12 @@
                     </form>
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="DatosCuenta" title="Mis datos">
+						<a href="DatosCuenta.aspx" title="Mis datos">
 							<i class="zmdi zmdi-account-circle"></i>
 						</a>
 					</li>
 					<li>
-						<a href="my-account.html" title="Mi cuenta">
+						<a href="Cuenta.aspx" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>
@@ -78,7 +78,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="ListaAdmin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="Admin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
 							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
