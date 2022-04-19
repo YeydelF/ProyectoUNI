@@ -40,6 +40,7 @@ namespace Proyecto
             string cod = txtCodigo.Value.ToString();
             string nom = txtNombre.Value.ToString();
             p.AgregarCarreras(nom, cod);
+           
         }
     }
 }

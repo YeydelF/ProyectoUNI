@@ -47,7 +47,25 @@
         </div>
             </div>
         </div>
+        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="idGrupos" DataSourceID="SqlDataSource2">
+            <Columns>
+                <asp:BoundField DataField="idGrupos" HeaderText="idGrupos" InsertVisible="False" ReadOnly="True" SortExpression="idGrupos" />
+                <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                <asp:BoundField DataField="CodigoGrupo" HeaderText="CodigoGrupo" SortExpression="CodigoGrupo" />
+                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
+                <asp:CommandField ShowDeleteButton="true" ControlStyle-CssClass="btn btn-danger" HeaderText="Eliminar"/>
+                <asp:CommandField ShowEditButton="true" ControlStyle-CssClass="btn btn-info" HeaderText="Actualizar"/>
+            </Columns>
+        </asp:GridView>
+        
       
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:BDUNIConnectionString %>" 
+            SelectCommand="SELECT * FROM [Grupos]"
+            UpdateCommand="UPDATE [Grupos] SET [Nombre] = @Nombre, [CodigoGrupo]=@CodigoGrupo where idGrupos = @idGrupos"
+            DeleteCommand="Drop [Grupos]"
+            >
+            
+        </asp:SqlDataSource>
         
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
