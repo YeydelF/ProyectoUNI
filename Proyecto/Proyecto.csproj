@@ -67,6 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClienteRegistro.aspx" />
+    <Content Include="Cliente.aspx" />
     <Content Include="admin-search.html" />
     <Content Include="Admin.aspx" />
     <Content Include="admin.html" />
@@ -127,6 +129,7 @@
     <Content Include="js\material.min.js" />
     <Content Include="js\ripples.min.js" />
     <Content Include="js\sweetalert2.min.js" />
+    <Content Include="ListaCliente.aspx" />
     <Content Include="ListaAdmin.aspx" />
     <Content Include="ListaC.aspx" />
     <Content Include="my-account.html" />
@@ -137,6 +140,20 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteRegistro.aspx.cs">
+      <DependentUpon>ClienteRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClienteRegistro.aspx.designer.cs">
+      <DependentUpon>ClienteRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -206,6 +223,13 @@
     </Compile>
     <Compile Include="Inventario.aspx.designer.cs">
       <DependentUpon>Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaCliente.aspx.cs">
+      <DependentUpon>ListaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaCliente.aspx.designer.cs">
+      <DependentUpon>ListaCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaAdmin.aspx.cs">
       <DependentUpon>ListaAdmin.aspx</DependentUpon>

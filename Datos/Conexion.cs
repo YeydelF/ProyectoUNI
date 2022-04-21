@@ -10,7 +10,7 @@ namespace Datos
 {
     public class Conexion
     {
-        public SqlConnection conexion = new SqlConnection("Data Source = .; Initial Catalog =BDUNI; Uid = sa; Password = yeydel");
+        public SqlConnection conexion = new SqlConnection("Data Source = .; Initial Catalog =BDUNI;  Integrated security=true");
 
 
         public SqlConnection AbrirConexion()

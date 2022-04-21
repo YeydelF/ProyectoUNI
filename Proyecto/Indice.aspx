@@ -16,7 +16,7 @@
 
                 </div>
                  <div class="col-md-2">
-                     <a href="WebForm1.aspx" style="color:white" class="btn btn-info">Registrar</a>
+                     <a href="ClienteRegistro.aspx" style="color:white" class="btn btn-info">Registrar</a>
                 </div>
                 
             </div>

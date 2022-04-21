@@ -81,7 +81,7 @@
 							<a href="Admin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
-							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
+							<a href="Cliente.aspx"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
 						</li>
 					</ul>
 				</li>

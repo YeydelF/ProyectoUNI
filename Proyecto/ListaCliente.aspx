@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaAdmin.aspx.cs" Inherits="Proyecto.ListaAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListaCliente.aspx.cs" Inherits="Proyecto.ListaAdmin" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -110,24 +110,24 @@
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>ADMINISTRADORES</small></h1>
 			</div>
-			<p class="lead">Lista actual de administradores del sistema de pedidos de equipos UNI-RUACS</p>
+			<p class="lead">Lista actual de Clientes del sistema de pedidos de equipos UNI-RUACS</p>
 		</div>
 
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
 			  		<a href="Admin.aspx" class="btn btn-info">
-			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR
+			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVO CLIENTE
 			  		</a>
 			  	</li>
 			  	<li>
 			  		<a href="ListaAdmin.aspx" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE ADMINISTRADORES
+			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CLIENTES
 			  		</a>
 			  	</li>
 			  	<li>
 			  		<a href="admin-search.html" class="btn btn-primary">
-			  			<i class="zmdi zmdi-search"></i> &nbsp; BUSCAR ADMINISTRADOR
+			  			<i class="zmdi zmdi-search"></i> &nbsp; BUSCAR CLIENTE
 			  		</a>
 			  	</li>
 			</ul>
@@ -137,7 +137,7 @@
 		<div class="container-fluid">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i>&nbsp; LISTA DE ADMINISTRADORES</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i>&nbsp; LISTA DE CLIENTES</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">

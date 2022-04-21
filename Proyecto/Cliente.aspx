@@ -1,34 +1,40 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cliente.aspx.cs" Inherits="Proyecto.Admin" %>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>Empresa</title>
+	<title>Admin</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 	<!-- SideBar -->
+    <form id="form1" runat="server">
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+				   <img src="assets/img/descarga.png" width="70" height="40" /> 
+                <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
 				<figure class="full-box">
 					<img src="./assets/avatars/AdminMaleAvatar.png" alt="UserIcon">
-					<figcaption class="text-center text-titles">User Name</figcaption>
+					<figcaption class="text-center text-titles">
+                           <asp:Label ID="Label1" runat="server" Text="Usuario" CssClass="text-center text-titles"></asp:Label>
+					</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
 					<li>
-						<a href="my-data.html" title="Mis datos">
+						<a href="DatosCuenta.aspx" title="Mis datos">
 							<i class="zmdi zmdi-account-circle"></i>
 						</a>
 					</li>
 					<li>
-						<a href="my-account.html" title="Mi cuenta">
+						<a href="Cuenta.aspx" title="Mi cuenta">
 							<i class="zmdi zmdi-settings"></i>
 						</a>
 					</li>
@@ -42,8 +48,8 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
+					<a href="Inicio.aspx">
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Inicio
 					</a>
 				</li>
 				<li>
@@ -55,7 +61,7 @@
 							<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
 						</li>
 						<li>
-							<a href="category.html"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+							<a href="carrera.aspx"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
 						</li>
 						<li>
 							<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
@@ -71,10 +77,10 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+							<a href="Admin.aspx"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 						</li>
 						<li>
-							<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
+							<a href="Cliente.aspx"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
 						</li>
 					</ul>
 				</li>
@@ -105,7 +111,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administración <small>EMPRESA</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Usuarios <small>CLIENTES</small></h1>
 			</div>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
 		</div>
@@ -113,58 +119,69 @@
 		<div class="container-fluid">
 			<ul class="breadcrumb breadcrumb-tabs">
 			  	<li>
-			  		<a href="company.html" class="btn btn-info">
-			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVA EMPRESA
+			  		<a href="#" class="btn btn-info">
+			  			<i class="zmdi zmdi-plus"></i> &nbsp; NUEVO CLIENTE
 			  		</a>
 			  	</li>
 			  	<li>
-			  		<a href="company-list.html" class="btn btn-success">
-			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE EMPRESAS
+			  		<a href="ListaCliente.aspx" class="btn btn-success">
+			  			<i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE CLIENTES
+			  		</a>
+			  	</li>
+			  	<li>
+			  		<a href="admin-search.html" class="btn btn-primary">
+			  			<i class="zmdi zmdi-search"></i> &nbsp; BUSCAR CLIENTE
 			  		</a>
 			  	</li>
 			</ul>
 		</div>
 
-		<!-- panel datos de la empresa -->
+		<!-- Panel nuevo administrador -->
 		<div class="container-fluid">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; DATOS DE LA EMPRESA</h3>
+					<h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO CLIENTE</h3>
 				</div>
 				<div class="panel-body">
 					<form>
 				    	<fieldset>
-				    		<legend><i class="zmdi zmdi-assignment"></i> &nbsp; Datos básicos</legend>
+				    		<legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
 				    		<div class="container-fluid">
 				    			<div class="row">
-				    				<div class="col-xs-12 col-sm-6">
+				    				<div class="col-xs-12">
 								    	<div class="form-group label-floating">
-										  	<label class="control-label">DNI/CÓDIGO/NÚMERO DE REGISTRO *</label>
-										  	<input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30">
+										  	<label class="control-label">CEDULA *</label>
+										  	<input pattern="[0-9-]{1,30}" class="form-control" type="text" name="dni-reg" required="" maxlength="30" id="Cedula" runat="server">
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 								    	<div class="form-group label-floating">
-										  	<label class="control-label">Nombre de la empresa *</label>
-										  	<input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{1,40}" class="form-control" type="text" name="nombre-reg" required="" maxlength="40">
+										  	<label class="control-label">Nombres *</label>
+										  	<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="nombre-reg" required="" maxlength="30" id="Nombre" runat="server">
+										</div>
+				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Apellidos *</label>
+										  	<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="apellido-reg" required="" maxlength="30" id="Apellido" runat="server">
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
 										<div class="form-group label-floating">
 										  	<label class="control-label">Teléfono</label>
-										  	<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15">
+										  	<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15" id="Telefono" runat="server">
 										</div>
 				    				</div>
-				    				<div class="col-xs-12 col-sm-6">
+                                    <div class="col-xs-12 col-sm-6">
 										<div class="form-group label-floating">
-										  	<label class="control-label">E-mail</label>
-										  	<input class="form-control" type="email" name="email-reg" maxlength="50">
+										  	<label class="control-label">Código</label>
+										  	<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="codigo-reg" maxlength="15" required="" id="Codigo" runat="server">
 										</div>
 				    				</div>
 				    				<div class="col-xs-12">
 										<div class="form-group label-floating">
 										  	<label class="control-label">Dirección</label>
-										  	<input class="form-control" type="text" name="direccion-reg" maxlength="170">
+										  	<textarea name="direccion-reg" class="form-control" rows="2" maxlength="100" id="Direccion" runat="server"></textarea>
 										</div>
 				    				</div>
 				    			</div>
@@ -172,33 +189,43 @@
 				    	</fieldset>
 				    	<br>
 				    	<fieldset>
-				    		<legend><i class="zmdi zmdi-assignment-o"></i> &nbsp; Otros datos</legend>
+				    		<legend><i class="zmdi zmdi-key"></i> &nbsp; Datos de la cuenta</legend>
 				    		<div class="container-fluid">
 				    			<div class="row">
 				    				<div class="col-xs-12">
 							    		<div class="form-group label-floating">
-										  	<label class="control-label">Nombre del gerente o director *</label>
-										  	<input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,50}" class="form-control" type="text" name="director-reg" required="" maxlength="50">
+										  	<label class="control-label">Nombre de usuario *</label>
+										  	<input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" class="form-control" type="text" name="usuario-reg" required="" maxlength="15" id="Usuario" runat="server">
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
-							    		<div class="form-group label-floating">
-										  	<label class="control-label">Símbolo de moneda *</label>
-										  	<input class="form-control" type="text" name="moneda-reg" required="" maxlength="1">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Contraseña *</label>
+										  	<input class="form-control" type="password" name="password1-reg" required="" maxlength="70" id="Pass" runat="server">
 										</div>
 				    				</div>
 				    				<div class="col-xs-12 col-sm-6">
-							    		<div class="form-group label-floating">
-										  	<label class="control-label">Año *</label>
-										  	<input pattern="[0-9]{4,4}" class="form-control" type="text" name="year-reg" required="" maxlength="4">
+										<div class="form-group label-floating">
+										  	<label class="control-label">Repita la contraseña *</label>
+										  	<input class="form-control" type="password" name="password2-reg" required="" maxlength="70" id="Pass2" runat="server">
 										</div>
 				    				</div>
+				    				<div class="col-xs-12 col-sm-6">
+										<div class="form-group label-floating">
+										  	<label class="control-label">E-mail</label>
+										  	<input class="form-control" type="email" name="email-reg" maxlength="50" id="Correo" runat="server">
+										</div>
+				    				</div>
+				    				
 				    			</div>
 				    		</div>
 				    	</fieldset>
 				    	<br>
+				    	>
 					    <p class="text-center" style="margin-top: 20px;">
-					    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                            <br />
+                            <asp:Button ID="Button1" runat="server" Text="Guardar" CssClass="btn btn-info btn-raised btn-sm" OnClick="Button1_Click"/>
 					    </p>
 				    </form>
 				</div>
@@ -206,7 +233,7 @@
 		</div>
 		
 	</section>
-
+        </form>
 	<!--====== Scripts -->
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>
