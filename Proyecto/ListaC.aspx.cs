@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-
+using Datos;
 namespace Proyecto
 {
     public partial class ListaC : System.Web.UI.Page
@@ -20,7 +16,12 @@ namespace Proyecto
                 foreach (var word in words)
                 {
                     arr.Add(word);
-                    Console.WriteLine(word.ToString());
+                   
+                }
+                string val = arr[1].ToString();
+                if (val != "1")
+                {
+                    Response.Redirect("Error/Error.html");
                 }
 
             }
@@ -28,6 +29,23 @@ namespace Proyecto
             {
                 Response.Redirect("Indice.aspx");
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Procedimientos p = new Procedimientos();//Este codigo debe de ir igual en todos los botones, solo cambia el nombre de los campos
+            string cod = txtCodigo.Value.ToString();//este
+            string nom = txtNombre.Value.ToString();// y este
+            if (cod != "" && nom != "" )
+            {
+                p.AgregarCarreras(nom, cod);
+            }
+            else
+            {
+                string msm = "Error, uno de los campos están vacíos";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('" + msm + "')", true);
+            }
+           
         }
     }
 }
