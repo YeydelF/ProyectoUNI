@@ -7,6 +7,7 @@ namespace Proyecto
     public partial class ListaC : System.Web.UI.Page
     {
         ArrayList arr = new ArrayList();
+        Consultas c = new Consultas();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.Cookies["Valores"] != null)//Este codigo siempre debe de ir para validar la sesión
@@ -18,6 +19,9 @@ namespace Proyecto
                     arr.Add(word);
                    
                 }
+                string nom = arr[0].ToString();
+                string Nom = c.CSimple("SELECT (Nombre + ' ' + Apellido) AS Usuario FROM Persona, Usuarios WHERE Usuarios.idUsuario = '" + nom + "' AND Persona.idPersona = Usuarios.idPersona");
+                Label1.Text = Nom;
                 string val = arr[1].ToString();
                 if (val != "1")
                 {

@@ -62,7 +62,7 @@
 							<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
 						</li>
 						<li>
-							<a href="carreras.aspx"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Carreras</a>
+							<a href="ListaC.aspx"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Listas</a>
 						</li>
 						<li>
 							<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
